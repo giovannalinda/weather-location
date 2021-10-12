@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 function App () {
+  const [location, setLocation] = useState(false)
+
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition((position) => {
+      console.log(position.coords.latitude)
+      console.log(position.coords.longitude)
+      setLocation(true)
+    })
+  }, [])
+
   return (
     <>
       <h3>Clima nas suas coordenadas</h3>
