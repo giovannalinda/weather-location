@@ -24,7 +24,6 @@ Open http://localhost:3000 to view it in the browser.
 
 ### Technologies used
 * [ReactJS](https://reactjs.org)
-* [Styled Components](https://styled-components.com)
 * [ESLint](https://eslint.org)
 * [EditorConfig](https://editorconfig.org)
 * [Prettier](https://prettier.io/)
