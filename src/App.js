@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import * as S from './styles/styles'
 import Logo from './assets/logo.svg'
 
 function App () {
@@ -34,13 +33,13 @@ function App () {
   if (location === false) {
     return (
       <>
-        Voce precisa habilitar a localização no browser
+        Você precisa habilitar a localização no browser
       </>
     )
   } else if (weather === false) {
     return (
       <>
-        <h3>Carregando o clima</h3>
+        <h3>Carregando o clima...</h3>
       </>
     )
   } else {
@@ -48,15 +47,15 @@ function App () {
       <>
         <img src={Logo} alt='Logo' />
         <h3>Detalhes do clima</h3>
+        <h4>{weather.main.temp.toFixed(0)}°C</h4>
         <p>{weather.weather[0].description}</p>
         <ul>
-          <li>{dayName[now.getDay()]}</li>
           <li>{weather.name}</li>
-          <li>{weather.main.temp.toFixed(0)}°C</li>
-          <li>Temperatura máxima: {weather.main.temp_max.toFixed(0)}°C</li>
-          <li>Temperatura mínima: {weather.main.temp_min.toFixed(0)}°C</li>
-          <li>Vento: {weather.wind.speed}km/h</li>
-          <li>Umidade: {weather.main.humidity}%</li>
+          <li>{dayName[now.getDay()]}</li>
+          <li>Vento: <strong>{weather.wind.speed}</strong>km/h</li>
+          <li>Umidade: <strong>{weather.main.humidity}%</strong> </li>
+          <li>Temperatura máxima: <strong>{weather.main.temp_max.toFixed(0)}°C</strong></li>
+          <li>Temperatura mínima: <strong>{weather.main.temp_min.toFixed(0)}°C</strong></li>
         </ul>
       </>
     )
