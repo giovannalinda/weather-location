@@ -1,5 +1,8 @@
 <h1 align="center">Weather forecast application using Open Weather API</h1>
 
+![Weather Location - Google Chrome 06_11_2021 02_22_49](https://user-images.githubusercontent.com/71105672/140599024-e551c594-1f99-4cf7-9e1d-0c72dbbdadfd.png)
+
+
 ### Starting...
 #### Make a clone
 ```
