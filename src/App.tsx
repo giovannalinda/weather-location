@@ -18,7 +18,7 @@ function App () {
   const nowDay = new Date().getDay()
   const weekDayName = weekDays[nowDay]
 
-  if (!location) {
+  if (!location && !isLoading) {
     return <h1>Você precisa habilitar a localização no navegador.</h1>
   }
 
@@ -30,7 +30,7 @@ function App () {
     <>
       <img src={Logo} alt='Logo' />
       <h3>Detalhes do clima</h3>
-      <h4>{weather.actualTemperature?.toFixed(0)}°C</h4>
+      <h4>{weather.actualTemperature}°C</h4>
       <p>{weather.description}</p>
       <ul>
         <li>{weather.name}</li>
@@ -46,13 +46,13 @@ function App () {
         <li>
           Temperatura máxima:{' '}
           <strong>
-            {weather.maxTemperature?.toFixed(0)}°C
+            {weather.maxTemperature}°C
           </strong>
         </li>
         <li>
           Temperatura mínima:{' '}
           <strong>
-            {weather.minTemperature?.toFixed(0)}°C
+            {weather.minTemperature}°C
           </strong>
         </li>
       </ul>

@@ -44,9 +44,9 @@ export function useWeather ({ location: [lat, lng] = [0, 0] }: UseWeatherParams)
       name: weather?.name,
       description: weather?.weather[0].description,
       speed: weather?.wind.speed,
-      actualTemperature: weather?.main.temp,
-      maxTemperature: weather?.main.temp_max,
-      minTemperature: weather?.main.temp_min,
+      actualTemperature: weather?.main.temp.toFixed(0),
+      maxTemperature: weather?.main.temp_max?.toFixed(0),
+      minTemperature: weather?.main.temp_min.toFixed(0),
       humidity: weather?.main.humidity,
     },
   }
